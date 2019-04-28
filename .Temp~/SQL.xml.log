@@ -1,0 +1,37 @@
+[25 Apr 2019 13:25:23] DEBUG Executing SQL script
+[25 Apr 2019 13:25:23] INFO ================================================================================
+[25 Apr 2019 13:25:23] INFO onError= 'abort'
+[25 Apr 2019 13:25:23] INFO autoCommit= 'false'
+[25 Apr 2019 13:25:23] INFO username= 'manage'
+[25 Apr 2019 13:25:23] INFO outputPath= 'C:\WebRatio\WebRatio Community Platform 7.2.18.x64bit\workspace\Expo\.Temp~\SQL.xml'
+[25 Apr 2019 13:25:23] INFO outputLogPath= 'C:\WebRatio\WebRatio Community Platform 7.2.18.x64bit\workspace\Expo\.Temp~\SQL.xml.log'
+[25 Apr 2019 13:25:23] INFO encoding= ''
+[25 Apr 2019 13:25:23] INFO driverClass= 'org.apache.derby.jdbc.ClientDriver'
+[25 Apr 2019 13:25:23] INFO sqlScript= 'C:\WebRatio\WebRatio Community Platform 7.2.18.x64bit\workspace\Expo\WebContent\WEB-INF\descr\sql\data.sql'
+[25 Apr 2019 13:25:23] INFO eventSocketPort= '55361'
+[25 Apr 2019 13:25:23] INFO statementSeparator= ';'
+[25 Apr 2019 13:25:23] INFO derby.system.home= 'C:\WebRatio\WebRatio Community Platform 7.2.18.x64bit\workspace\.metadata\.plugins\com.webratio.commons.db\derby'
+[25 Apr 2019 13:25:23] INFO password= 'Manage'
+[25 Apr 2019 13:25:23] INFO url= 'jdbc:derby://localhost:50124/ExpoDB;create=true'
+[25 Apr 2019 13:25:23] INFO ================================================================================
+[25 Apr 2019 13:25:23] INFO Connecting to the Database...
+[25 Apr 2019 13:25:23] INFO Database connection estabilished
+[25 Apr 2019 13:25:23] INFO transaction isolation: 2
+[25 Apr 2019 13:25:23] DEBUG ================================================================================
+[25 Apr 2019 13:25:23] DEBUG Executing SQL script file: C:\WebRatio\WebRatio Community Platform 7.2.18.x64bit\workspace\Expo\WebContent\WEB-INF\descr\sql\data.sql
+[25 Apr 2019 13:25:23] DEBUG Executing statement:     INSERT INTO APP.MODULE (OID, MODULEID, MODULENAME) VALUES (1, 'sv1', 'Voters')
+[25 Apr 2019 13:25:23] DEBUG Executing statement:  INSERT INTO APP.MODULE (OID, MODULEID, MODULENAME) VALUES (2, 'sv3', 'Administrators')
+[25 Apr 2019 13:25:23] DEBUG Executing statement:      INSERT INTO "APP"."GROUP" (OID, GROUPNAME) VALUES (1, 'Voters')
+[25 Apr 2019 13:25:23] DEBUG Executing statement:  INSERT INTO "APP"."GROUP" (OID, GROUPNAME) VALUES (2, 'Administrators')
+[25 Apr 2019 13:25:23] DEBUG Executing statement:     INSERT INTO APP.GROUP_MODULE (GROUP_OID, MODULE_OID) VALUES (1, 1)
+[25 Apr 2019 13:25:23] DEBUG Executing statement:  INSERT INTO APP.GROUP_MODULE (GROUP_OID, MODULE_OID) VALUES (2, 2)
+[25 Apr 2019 13:25:23] DEBUG Executing statement:    INSERT INTO "APP"."USER" (OID, USERNAME, PASSWORD, EMAIL) VALUES (1, 'user', 'user', 'user@test.com')
+[25 Apr 2019 13:25:23] DEBUG Executing statement:  INSERT INTO "APP"."USER" (OID, USERNAME, PASSWORD, EMAIL) VALUES (2, 'admin', 'admin', 'admin@test.com')
+[25 Apr 2019 13:25:23] DEBUG Executing statement:    INSERT INTO APP.USER_GROUP (USER_OID, GROUP_OID) VALUES (1, 1)
+[25 Apr 2019 13:25:23] DEBUG Executing statement:  INSERT INTO APP.USER_GROUP (USER_OID, GROUP_OID) VALUES (2, 2)
+[25 Apr 2019 13:25:23] DEBUG Executing statement:    INSERT INTO APP.EXHIBIT (OID, NAME) VALUES (1, 'Science')
+[25 Apr 2019 13:25:23] DEBUG Executing statement:  INSERT INTO APP.EXHIBIT (OID, NAME) VALUES (2, 'WebRatio')
+[25 Apr 2019 13:25:23] DEBUG ================================================================================
+[25 Apr 2019 13:25:23] DEBUG SQL SCRIPT SUCCESSFULLY EXECUTED
+[25 Apr 2019 13:25:23] INFO Database connection closed
+[25 Apr 2019 13:25:23] DEBUG Total time: 761 milliseconds

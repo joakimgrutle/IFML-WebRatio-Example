@@ -1,0 +1,71 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="305" gr:y="20" id="sv1#area1#page1" name="Exhibit">
+  <ContentUnits>
+    <EntryUnit id="sv1#area1#page1#enu3" name="Votes" customDescriptor="false" computationMode="execute" gr:x="230" gr:y="10" entity="ent2" linkOrder="sv1#area1#page1#enu3#ln4">
+      <Field id="sv1#area1#page1#enu3#fld5" name="score" ajaxEventEnabled="false" ajaxUploadEnabled="false" type="float" modifiable="true" attribute="ent2#att4" hidden="false" preloaded="false"/>
+      <MultiSelectionField id="sv1#area1#page1#enu3#msfld3" name="VoteToExhibit" type="string" role="rel2#role3"/>
+      <Link id="sv1#area1#page1#enu3#ln4" name="Flow4" to="sv1#area1#cru2" type="normal" validate="true">
+        <LinkParameter id="sv1#area1#page1#enu3#ln4#par2" name="score_score" sourceValue="score" target="sv1#area1#cru2.ent2#att4"/>
+      </Link>
+    </EntryUnit>
+    <DataUnit gr:x="0" gr:y="0" id="sv1#area1#page1#dau1" name="ExhibitDetails" entity="ent1" displayAll="true">
+      <Selector id="sv1#area1#page1#dau1#su1" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area1#page1#dau1#su1#kcond1" name="KeyCondition1" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv1#area1#page1#dau1#ln3" name="Flow3" to="sv1#area1#page1#enu3" type="transport" validate="true" automaticCoupling="true"/>
+    </DataUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area1#page1#enu3">
+          <layout:Field field="sv1#area1#page1#enu3#fld5"/>
+          <layout:Field field="sv1#area1#page1#enu3#msfld3"/>
+          <layout:Link link="sv1#area1#page1#enu3#ln4"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area1#page1#dau1">
+          <layout:Attribute attribute="ent1#att2"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

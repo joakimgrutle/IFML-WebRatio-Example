@@ -1,0 +1,96 @@
+[25 Apr 2019 13:25:24] Building database metadata model
+[25 Apr 2019 13:25:24] Properties: {partialRefresh=false, processColumnsUsingSelect=, includePrimaryKeys=true, eventSocketClient=com.webratio.commons.net.EventSocketClient@6d817473, includeTables=true, username=manage, outputLogPath=C:\WebRatio\WebRatio Community Platform 7.2.18.x64bit\workspace\Expo\.Temp~\DB.xml.log, readIndexes=null, driverClass=org.apache.derby.jdbc.ClientDriver, includeSynonyms=true, metaDataProviderClass=com.webratio.commons.db.metadata.DerbyMetaDataProvider, outputPath=C:\WebRatio\WebRatio Community Platform 7.2.18.x64bit\workspace\Expo\.Temp~\DB.xml, schemaRegex=null, readProcedures=null, includeViews=true, derby.system.home=C:\WebRatio\WebRatio Community Platform 7.2.18.x64bit\workspace\.metadata\.plugins\com.webratio.commons.db\derby, url=jdbc:derby://localhost:50124/ExpoDB;create=true, tableRegex=null, readSQLDefinitions=true, includeForeignKeys=false, retrieveAllNames=false, tablesToRefresh=, eventSocketPort=55364}
+[25 Apr 2019 13:25:24] URL: jdbc:derby://localhost:50124/ExpoDB;create=true
+[25 Apr 2019 13:25:24] Product name: Apache Derby
+[25 Apr 2019 13:25:24] Product version: 10.5.3.0 - (802917)
+[25 Apr 2019 13:25:24] Driver name: Apache Derby Network Client JDBC Driver
+[25 Apr 2019 13:25:24] Driver version: 10.5.3.0 - (802917)
+[25 Apr 2019 13:25:24] Driver major version: 10
+[25 Apr 2019 13:25:24] Driver minor version: 5
+[25 Apr 2019 13:25:24] Identifier quote string: 5
+[25 Apr 2019 13:25:25] Retrieving schemas
+[25 Apr 2019 13:25:25]   Found schema: APP
+[25 Apr 2019 13:25:25]   Found schema: NULLID
+[25 Apr 2019 13:25:25]   Found schema: SQLJ
+[25 Apr 2019 13:25:25]   Found schema: SYS
+[25 Apr 2019 13:25:25]   Found schema: SYSCAT
+[25 Apr 2019 13:25:25]   Found schema: SYSCS_DIAG
+[25 Apr 2019 13:25:25]   Found schema: SYSCS_UTIL
+[25 Apr 2019 13:25:25]   Found schema: SYSFUN
+[25 Apr 2019 13:25:25]   Found schema: SYSIBM
+[25 Apr 2019 13:25:25]   Found schema: SYSPROC
+[25 Apr 2019 13:25:25]   Found schema: SYSSTAT
+[25 Apr 2019 13:25:25] Retrieving [TABLE, VIEW, SYNONYM] for schema 'APP'
+[25 Apr 2019 13:25:25]   Found 'APP.EXHIBIT' [type = TABLE]
+[25 Apr 2019 13:25:25]   Found 'APP.EXHIBIT_GROUP' [type = TABLE]
+[25 Apr 2019 13:25:25]   Found 'APP.GROUP' [type = TABLE]
+[25 Apr 2019 13:25:25]   Found 'APP.GROUP_MODULE' [type = TABLE]
+[25 Apr 2019 13:25:25]   Found 'APP.MODULE' [type = TABLE]
+[25 Apr 2019 13:25:25]   Found 'APP.USER' [type = TABLE]
+[25 Apr 2019 13:25:25]   Found 'APP.USER_GROUP' [type = TABLE]
+[25 Apr 2019 13:25:25]   Found 'APP.VOTE' [type = TABLE]
+[25 Apr 2019 13:25:25]   Found 'APP.VOTE_EXHIBIT' [type = TABLE]
+[25 Apr 2019 13:25:25] Retrieving [TABLE, VIEW, SYNONYM] for schema 'NULLID'
+[25 Apr 2019 13:25:25] Retrieving [TABLE, VIEW, SYNONYM] for schema 'SQLJ'
+[25 Apr 2019 13:25:25] Retrieving [TABLE, VIEW, SYNONYM] for schema 'SYSCAT'
+[25 Apr 2019 13:25:25] Retrieving [TABLE, VIEW, SYNONYM] for schema 'SYSCS_DIAG'
+[25 Apr 2019 13:25:25] Retrieving [TABLE, VIEW, SYNONYM] for schema 'SYSCS_UTIL'
+[25 Apr 2019 13:25:25] Retrieving [TABLE, VIEW, SYNONYM] for schema 'SYSFUN'
+[25 Apr 2019 13:25:25] Retrieving [TABLE, VIEW, SYNONYM] for schema 'SYSPROC'
+[25 Apr 2019 13:25:25] Retrieving [TABLE, VIEW, SYNONYM] for schema 'SYSSTAT'
+[25 Apr 2019 13:25:25] Retrieving columns for 'APP.EXHIBIT' [type = TABLE]
+[25 Apr 2019 13:25:25]   Found column: OID [type = INTEGER][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 Apr 2019 13:25:25]   Found column: NAME [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[25 Apr 2019 13:25:25] Retrieving primary keys for 'APP.EXHIBIT' [type = TABLE]
+[25 Apr 2019 13:25:25]   Found primary key column: OID
+[25 Apr 2019 13:25:25] Retrieving columns for 'APP.EXHIBIT_GROUP' [type = TABLE]
+[25 Apr 2019 13:25:25]   Found column: EXHIBIT_OID [type = INTEGER][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 Apr 2019 13:25:25]   Found column: GROUP_OID [type = INTEGER][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 Apr 2019 13:25:25] Retrieving primary keys for 'APP.EXHIBIT_GROUP' [type = TABLE]
+[25 Apr 2019 13:25:25]   Found primary key column: EXHIBIT_OID
+[25 Apr 2019 13:25:25]   Found primary key column: GROUP_OID
+[25 Apr 2019 13:25:25] Retrieving columns for 'APP.GROUP' [type = TABLE]
+[25 Apr 2019 13:25:25]   Found column: OID [type = INTEGER][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 Apr 2019 13:25:25]   Found column: GROUPNAME [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[25 Apr 2019 13:25:25]   Found column: MODULE_OID [type = INTEGER][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 Apr 2019 13:25:25] Retrieving primary keys for 'APP.GROUP' [type = TABLE]
+[25 Apr 2019 13:25:25]   Found primary key column: OID
+[25 Apr 2019 13:25:25] Retrieving columns for 'APP.GROUP_MODULE' [type = TABLE]
+[25 Apr 2019 13:25:25]   Found column: GROUP_OID [type = INTEGER][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 Apr 2019 13:25:25]   Found column: MODULE_OID [type = INTEGER][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 Apr 2019 13:25:25] Retrieving primary keys for 'APP.GROUP_MODULE' [type = TABLE]
+[25 Apr 2019 13:25:25]   Found primary key column: GROUP_OID
+[25 Apr 2019 13:25:25]   Found primary key column: MODULE_OID
+[25 Apr 2019 13:25:25] Retrieving columns for 'APP.MODULE' [type = TABLE]
+[25 Apr 2019 13:25:25]   Found column: OID [type = INTEGER][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 Apr 2019 13:25:25]   Found column: MODULEID [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[25 Apr 2019 13:25:25]   Found column: MODULENAME [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[25 Apr 2019 13:25:25] Retrieving primary keys for 'APP.MODULE' [type = TABLE]
+[25 Apr 2019 13:25:25]   Found primary key column: OID
+[25 Apr 2019 13:25:25] Retrieving columns for 'APP.USER' [type = TABLE]
+[25 Apr 2019 13:25:25]   Found column: OID [type = INTEGER][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 Apr 2019 13:25:25]   Found column: USERNAME [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[25 Apr 2019 13:25:25]   Found column: PASSWORD [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[25 Apr 2019 13:25:25]   Found column: EMAIL [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[25 Apr 2019 13:25:25]   Found column: GROUP_OID [type = INTEGER][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 Apr 2019 13:25:25] Retrieving primary keys for 'APP.USER' [type = TABLE]
+[25 Apr 2019 13:25:25]   Found primary key column: OID
+[25 Apr 2019 13:25:25] Retrieving columns for 'APP.USER_GROUP' [type = TABLE]
+[25 Apr 2019 13:25:25]   Found column: USER_OID [type = INTEGER][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 Apr 2019 13:25:25]   Found column: GROUP_OID [type = INTEGER][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 Apr 2019 13:25:25] Retrieving primary keys for 'APP.USER_GROUP' [type = TABLE]
+[25 Apr 2019 13:25:25]   Found primary key column: USER_OID
+[25 Apr 2019 13:25:25]   Found primary key column: GROUP_OID
+[25 Apr 2019 13:25:25] Retrieving columns for 'APP.VOTE' [type = TABLE]
+[25 Apr 2019 13:25:25]   Found column: OID [type = INTEGER][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 Apr 2019 13:25:25]   Found column: SCORE [type = DOUBLE][SQL/XOPEN type = 8][size = 52][dec. digits = 0]
+[25 Apr 2019 13:25:25] Retrieving primary keys for 'APP.VOTE' [type = TABLE]
+[25 Apr 2019 13:25:25]   Found primary key column: OID
+[25 Apr 2019 13:25:25] Retrieving columns for 'APP.VOTE_EXHIBIT' [type = TABLE]
+[25 Apr 2019 13:25:25]   Found column: VOTE_OID [type = INTEGER][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 Apr 2019 13:25:25]   Found column: EXHIBIT_OID [type = INTEGER][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 Apr 2019 13:25:25] Retrieving primary keys for 'APP.VOTE_EXHIBIT' [type = TABLE]
+[25 Apr 2019 13:25:25]   Found primary key column: VOTE_OID
+[25 Apr 2019 13:25:25]   Found primary key column: EXHIBIT_OID
+[25 Apr 2019 13:25:25] Database metadata retrieved (168 ms)
+[25 Apr 2019 13:25:25] Database connection closed
