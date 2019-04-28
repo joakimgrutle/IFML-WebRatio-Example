@@ -13,7 +13,7 @@ https://www.ifml.org/wp-content/uploads/IFML-Bookstore-Example.pdf
 
 To populate database:
 
-Locate "ExpoDB" in the "Outline" tab of the project in WebRatio.
-Right click on "ExpoDB" and hit Execute SQL (might be clever to Generate SQL first).
+Locate "ExpoDB" in the "Outline" tab of the project in WebRatio.\
+Right click on "ExpoDB" and hit Execute SQL (might be clever to Generate SQL first).\
 Navigate to: */WebContent/WEB-INF/descr/sql and select data.sql.
 
