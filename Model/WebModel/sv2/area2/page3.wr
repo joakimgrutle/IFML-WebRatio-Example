@@ -1,0 +1,99 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#area2#page3" name="Exhibit" gr:x="290" gr:y="0">
+  <ContentUnits>
+    <EntryUnit id="sv2#area2#page3#enu1" name="Vote" customDescriptor="false" computationMode="execute" gr:x="165" gr:y="10" entity="ent2" gr:showAllParts="false" ajaxTooltipEnabled="false" linkOrder="sv2#area2#page3#enu1#ln1">
+      <Field id="sv2#area2#page3#enu1#fld1" name="score" ajaxEventEnabled="false" ajaxUploadEnabled="false" type="float" modifiable="true" attribute="ent2#att4" hidden="false" preloaded="false"/>
+      <MultiSelectionField id="sv2#area2#page3#enu1#msfld1" name="VoteToExhibit" type="string" role="rel2#role3"/>
+      <Link id="sv2#area2#page3#enu1#ln1" name="Vote" to="sv2#area2#cru1" type="normal" validate="true">
+        <LinkParameter id="sv2#area2#page3#enu1#ln1#par5" name="Key [oid]_Exhibit.oid(VoteToExhibit)" target="sv2#area2#cru1.rel2#role3.ent1#att1" sourceLinkParameter="sv2#area2#page3#dau2#ln5#par15"/>
+        <LinkParameter id="sv2#area2#page3#enu1#ln1#par10" name="Vote Object_Vote Object" source="entityBean" target="sv2#area2#cru1.entityBeans"/>
+      </Link>
+    </EntryUnit>
+    <DataUnit id="sv2#area2#page3#dau2" name="ExhibitDetails" gr:x="15" gr:y="0" entity="ent1" displayAll="true">
+      <Selector id="sv2#area2#page3#dau2#su2" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#area2#page3#dau2#su2#kcond2" name="KeyCondition1" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv2#area2#page3#dau2#ln5" name="Flow3" to="sv2#area2#page3#enu1" type="transport" validate="true">
+        <LinkParameter id="sv2#area2#page3#dau2#ln5#par15" name="oid_PASSING" source="data.ent1#att1" passing="true"/>
+      </Link>
+      <Link id="sv2#area2#page3#dau2#ln7" name="Flow7" to="sv2#area2#page3#pwu5" automaticCoupling="true" type="transport" validate="true"/>
+    </DataUnit>
+    <PowerIndexUnit gr:x="0" gr:y="135" id="sv2#area2#page3#pwu5" name="Votes" sortable="true" checkable="false" useCountQuery="false" entity="ent2" displayAttributes="ent2#att3 ent2#att4">
+      <Selector id="sv2#area2#page3#pwu5#su3" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv2#area2#page3#pwu5#su3#rcond1" name="RoleCondition1" role="rel2#role4" predicate="in" implied="false"/>
+      </Selector>
+    </PowerIndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area2#page3#enu1">
+          <layout:Field field="sv2#area2#page3#enu1#fld1"/>
+          <layout:Field field="sv2#area2#page3#enu1#msfld1"/>
+          <layout:Link link="sv2#area2#page3#enu1#ln1"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area2#page3#dau2">
+          <layout:Attribute attribute="ent1#att2"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area2#page3#pwu5">
+          <layout:Attribute attribute="ent2#att3"/>
+          <layout:Attribute attribute="ent2#att4"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

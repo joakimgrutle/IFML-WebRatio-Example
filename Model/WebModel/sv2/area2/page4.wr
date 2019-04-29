@@ -1,9 +1,9 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv1#area1#page2" name="Home" customURLName="PublicHome">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#area2#page4" name="Home" gr:x="0" gr:y="5" customURLName="AdminHome">
   <ContentUnits>
-    <PowerIndexUnit gr:x="0" gr:y="0" id="sv1#area1#page2#pwu1" name="Users" sortable="true" checkable="false" useCountQuery="false" entity="User" displayAttributes="userName"/>
-    <PowerIndexUnit id="sv1#area1#page2#pwu2" entity="ent1" sortable="true" checkable="false" useCountQuery="false" gr:x="105" gr:y="0" name="Exhibits" displayAttributes="ent1#att2" linkOrder="sv1#area1#page2#pwu2#ln2">
-      <Link id="sv1#area1#page2#pwu2#ln2" name="View" to="sv1#area1#page1#dau1" type="normal" validate="true" ajaxEnabled="false">
-        <LinkParameter id="sv1#area1#page2#pwu2#ln2#par1" name="oid_KeyCondition1 [oid]" source="data[].ent1#att1" target="sv1#area1#page1#dau1#su1#kcond1.ent1#att1"/>
+    <PowerIndexUnit id="sv2#area2#page4#pwu3" name="Users" gr:x="0" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="User" displayAttributes="userName"/>
+    <PowerIndexUnit id="sv2#area2#page4#pwu4" name="Exhibits" linkOrder="sv2#area2#page4#pwu4#ln6" gr:x="105" gr:y="0" entity="ent1" sortable="true" checkable="false" useCountQuery="false" displayAttributes="ent1#att2">
+      <Link id="sv2#area2#page4#pwu4#ln6" name="View" to="sv2#area2#page3#dau2" type="normal" validate="true" ajaxEnabled="false">
+        <LinkParameter id="sv2#area2#page4#pwu4#ln6#par4" name="oid_KeyCondition1 [oid]" source="data[].ent1#att1" target="sv2#area2#page3#dau2#su2#kcond2.ent1#att1"/>
       </Link>
     </PowerIndexUnit>
   </ContentUnits>
@@ -38,9 +38,9 @@
     </layout:Row>
     <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Unit unitId="sv1#area1#page2#pwu2">
+        <layout:Unit unitId="sv2#area2#page4#pwu4">
           <layout:Attribute attribute="ent1#att2"/>
-          <layout:Link link="sv1#area1#page2#pwu2#ln2"/>
+          <layout:Link link="sv2#area2#page4#pwu4#ln6"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -57,7 +57,7 @@
     </layout:Row>
     <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Unit unitId="sv1#area1#page2#pwu1">
+        <layout:Unit unitId="sv2#area2#page4#pwu3">
           <layout:Attribute attribute="userName"/>
         </layout:Unit>
       </layout:Cell>
