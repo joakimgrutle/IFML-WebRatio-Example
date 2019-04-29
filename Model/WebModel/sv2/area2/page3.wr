@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#area2#page3" name="Exhibit" gr:x="290" gr:y="0">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#area2#page3" name="Exhibit" gr:x="290" gr:y="0" layout:cellLayout="WRDefault/BAM_TrendChart" layout:style="WebRatio">
   <ContentUnits>
     <EntryUnit id="sv2#area2#page3#enu1" name="Vote" customDescriptor="false" computationMode="execute" gr:x="165" gr:y="10" entity="ent2" gr:showAllParts="false" ajaxTooltipEnabled="false" linkOrder="sv2#area2#page3#enu1#ln1">
       <Field id="sv2#area2#page3#enu1#fld1" name="score" ajaxEventEnabled="false" ajaxUploadEnabled="false" type="float" modifiable="true" attribute="ent2#att4" hidden="false" preloaded="false"/>
@@ -8,7 +8,7 @@
         <LinkParameter id="sv2#area2#page3#enu1#ln1#par10" name="Vote Object_Vote Object" source="entityBean" target="sv2#area2#cru1.entityBeans"/>
       </Link>
     </EntryUnit>
-    <DataUnit id="sv2#area2#page3#dau2" name="ExhibitDetails" gr:x="15" gr:y="0" entity="ent1" displayAll="true">
+    <DataUnit id="sv2#area2#page3#dau2" name="ExhibitDetails" gr:x="15" gr:y="0" entity="ent1" displayAll="true" linkOrder="sv2#area2#page3#dau2#ln9">
       <Selector id="sv2#area2#page3#dau2#su2" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#area2#page3#dau2#su2#kcond2" name="KeyCondition1" predicate="in" implied="false"/>
       </Selector>
@@ -16,6 +16,9 @@
         <LinkParameter id="sv2#area2#page3#dau2#ln5#par15" name="oid_PASSING" source="data.ent1#att1" passing="true"/>
       </Link>
       <Link id="sv2#area2#page3#dau2#ln7" name="Flow7" to="sv2#area2#page3#pwu5" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="sv2#area2#page3#dau2#ln9" name="Clear Votes" to="sv2#area2#dlu2" type="normal" validate="true">
+        <LinkParameter id="sv2#area2#page3#dau2#ln9#par22" name="oid_RoleCondition2 [oid]" source="data.ent1#att1" target="sv2#area2#dlu2#su6#rcond2.ent1#att1"/>
+      </Link>
     </DataUnit>
     <PowerIndexUnit gr:x="0" gr:y="135" id="sv2#area2#page3#pwu5" name="Votes" sortable="true" checkable="false" useCountQuery="false" entity="ent2" displayAttributes="ent2#att3 ent2#att4">
       <Selector id="sv2#area2#page3#pwu5#su3" defaultPolicy="fill" booleanOperator="and">
@@ -48,6 +51,7 @@
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv2#area2#page3#dau2">
           <layout:Attribute attribute="ent1#att2"/>
+          <layout:Link link="sv2#area2#page3#dau2#ln9"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -69,6 +73,20 @@
           <layout:Attribute attribute="ent2#att4"/>
         </layout:Unit>
       </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
