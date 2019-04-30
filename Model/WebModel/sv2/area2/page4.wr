@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#area2#page4" name="Home" gr:x="0" gr:y="5" customURLName="AdminHome">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#area2#page4" name="Home" gr:x="0" gr:y="20" customURLName="AdminHome">
   <ContentUnits>
     <PowerIndexUnit id="sv2#area2#page4#pwu3" name="Users" gr:x="0" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="User" displayAttributes="userName"/>
     <PowerIndexUnit id="sv2#area2#page4#pwu4" name="Exhibits" linkOrder="sv2#area2#page4#pwu4#ln6" gr:x="105" gr:y="0" entity="ent1" sortable="true" checkable="false" useCountQuery="false" displayAttributes="ent1#att2">

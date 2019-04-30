@@ -1,3 +1,12 @@
-<SiteView id="sv2" name="admin" landmarks="sv2#area2" homePage="sv2#area2#page4">
-  <OperationUnits/>
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2" name="admin" landmarks="sv2#area2" homePage="sv2#area2#page4" layout:linkLayout="WRDefault/Extended">
+  <OperationUnits>
+    <GetUnit gr:x="335" gr:y="70" id="sv2#gtu7" name="Get7" contextParameters="UserCtxParam" gr:showAllParts="false">
+      <Link id="sv2#gtu7#ln15" name="Flow15" to="sv2#area2#page3#enu1" type="transport" validate="true">
+        <LinkParameter id="sv2#gtu7#ln15#par51" name="UserCtxParam.oid_userid" source="sv2#gtu7.UserCtxParam" target="sv2#area2#page3#enu1#fld21#slot3"/>
+        <LinkParameter id="sv2#gtu7#ln15#par52" name="UserCtxParam.oid_PASSING" source="sv2#gtu7.UserCtxParam" passing="true"/>
+      </Link>
+    </GetUnit>
+    <LoginUnit gr:x="810" gr:y="105" id="sv2#lgu4" name="Login4"/>
+    <LogoutUnit gr:x="785" gr:y="-65" id="sv2#lou3" name="Logout3" siteView="sv2"/>
+  </OperationUnits>
 </SiteView>

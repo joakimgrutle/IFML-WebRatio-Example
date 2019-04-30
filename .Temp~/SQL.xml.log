@@ -1,47 +1,37 @@
-[29 Apr 2019 13:12:52] DEBUG Executing SQL script
-[29 Apr 2019 13:12:52] INFO ================================================================================
-[29 Apr 2019 13:12:52] INFO onError= 'abort'
-[29 Apr 2019 13:12:52] INFO autoCommit= 'false'
-[29 Apr 2019 13:12:52] INFO username= 'manage'
-[29 Apr 2019 13:12:52] INFO outputPath= 'C:\Users\User\Documents\UIB\DAT353\webratioProsjekt\try2\.Temp~\SQL.xml'
-[29 Apr 2019 13:12:52] INFO outputLogPath= 'C:\Users\User\Documents\UIB\DAT353\webratioProsjekt\try2\.Temp~\SQL.xml.log'
-[29 Apr 2019 13:12:52] INFO encoding= ''
-[29 Apr 2019 13:12:52] INFO driverClass= 'org.apache.derby.jdbc.ClientDriver'
-[29 Apr 2019 13:12:52] INFO sqlScript= 'C:\Users\User\Documents\UIB\DAT353\webratioProsjekt\try2\WebContent\WEB-INF\descr\sql\data.sql'
-[29 Apr 2019 13:12:52] INFO eventSocketPort= '51379'
-[29 Apr 2019 13:12:52] INFO statementSeparator= ';'
-[29 Apr 2019 13:12:52] INFO derby.system.home= 'C:\WebRatio\WebRatio Community Platform 7.2.18.x64bit\WebRatio\workspace2\.metadata\.plugins\com.webratio.commons.db\derby'
-[29 Apr 2019 13:12:52] INFO password= 'Manage'
-[29 Apr 2019 13:12:52] INFO url= 'jdbc:derby://localhost:50124/ExpoDB;create=true'
-[29 Apr 2019 13:12:52] INFO ================================================================================
-[29 Apr 2019 13:12:52] INFO Connecting to the Database...
-[29 Apr 2019 13:12:52] INFO Database connection estabilished
-[29 Apr 2019 13:12:52] INFO transaction isolation: 2
-[29 Apr 2019 13:12:52] DEBUG ================================================================================
-[29 Apr 2019 13:12:52] DEBUG Executing SQL script file: C:\Users\User\Documents\UIB\DAT353\webratioProsjekt\try2\WebContent\WEB-INF\descr\sql\data.sql
-[29 Apr 2019 13:12:52] DEBUG Executing statement:     INSERT INTO APP.MODULE (OID, MODULEID, MODULENAME) VALUES (1, 'sv1', 'Voters')
-[29 Apr 2019 13:12:52] ERROR Could not execute statement:     INSERT INTO APP.MODULE (OID, MODULEID, MODULENAME) VALUES (1, 'sv1', 'Voters')
-java.sql.SQLIntegrityConstraintViolationException: The statement was aborted because it would have caused a duplicate key value in a unique or primary key constraint or unique index identified by 'SQL190429110310020' defined on 'MODULE'.
-	at org.apache.derby.client.am.SQLExceptionFactory40.getSQLException(Unknown Source)
-	at org.apache.derby.client.am.SqlException.getSQLException(Unknown Source)
-	at org.apache.derby.client.am.Statement.execute(Unknown Source)
-	at com.webratio.commons.db.utils.DBUtils.execute(DBUtils.java:523)
-	at com.webratio.commons.db.utils.DBUtils.executeScriptFiles(DBUtils.java:442)
-	at com.webratio.commons.db.utils.DBUtils.main(DBUtils.java:257)
-Caused by: org.apache.derby.client.am.SqlException: The statement was aborted because it would have caused a duplicate key value in a unique or primary key constraint or unique index identified by 'SQL190429110310020' defined on 'MODULE'.
-	at org.apache.derby.client.am.Statement.completeSqlca(Unknown Source)
-	at org.apache.derby.client.am.Statement.completeExecuteImmediate(Unknown Source)
-	at org.apache.derby.client.net.NetStatementReply.parseEXCSQLIMMreply(Unknown Source)
-	at org.apache.derby.client.net.NetStatementReply.readExecuteImmediate(Unknown Source)
-	at org.apache.derby.client.net.StatementReply.readExecuteImmediate(Unknown Source)
-	at org.apache.derby.client.net.NetStatement.readExecuteImmediate_(Unknown Source)
-	at org.apache.derby.client.am.Statement.readExecuteImmediate(Unknown Source)
-	at org.apache.derby.client.am.Statement.flowExecute(Unknown Source)
-	at org.apache.derby.client.am.Statement.executeX(Unknown Source)
-	... 4 more
-[29 Apr 2019 13:12:52] DEBUG Performing roolback...
-[29 Apr 2019 13:12:52] WARN NOTE: The rollback affects the DDL instructions only if supported by the current database
-[29 Apr 2019 13:12:52] DEBUG Rollback successfully executed
-[29 Apr 2019 13:12:52] ERROR SQL SCRIPT EXECUTION FAILED
-[29 Apr 2019 13:12:52] INFO Database connection closed
-[29 Apr 2019 13:12:52] DEBUG Total time: 2680 milliseconds
+[29 Apr 2019 14:29:17] DEBUG Executing SQL script
+[29 Apr 2019 14:29:17] INFO ================================================================================
+[29 Apr 2019 14:29:17] INFO onError= 'abort'
+[29 Apr 2019 14:29:17] INFO autoCommit= 'false'
+[29 Apr 2019 14:29:17] INFO username= 'manage'
+[29 Apr 2019 14:29:17] INFO outputPath= 'C:\Users\User\Documents\UIB\DAT353\webratioProsjekt\try2\.Temp~\SQL.xml'
+[29 Apr 2019 14:29:17] INFO outputLogPath= 'C:\Users\User\Documents\UIB\DAT353\webratioProsjekt\try2\.Temp~\SQL.xml.log'
+[29 Apr 2019 14:29:17] INFO encoding= ''
+[29 Apr 2019 14:29:17] INFO driverClass= 'org.apache.derby.jdbc.ClientDriver'
+[29 Apr 2019 14:29:17] INFO sqlScript= 'C:\Users\User\Documents\UIB\DAT353\webratioProsjekt\try2\WebContent\WEB-INF\descr\sql\data.sql'
+[29 Apr 2019 14:29:17] INFO eventSocketPort= '58579'
+[29 Apr 2019 14:29:17] INFO statementSeparator= ';'
+[29 Apr 2019 14:29:17] INFO derby.system.home= 'C:\WebRatio\WebRatio Community Platform 7.2.18.x64bit\WebRatio\workspace2\.metadata\.plugins\com.webratio.commons.db\derby'
+[29 Apr 2019 14:29:17] INFO password= 'Manage'
+[29 Apr 2019 14:29:17] INFO url= 'jdbc:derby://localhost:50124/ExpoDB;create=true'
+[29 Apr 2019 14:29:17] INFO ================================================================================
+[29 Apr 2019 14:29:17] INFO Connecting to the Database...
+[29 Apr 2019 14:29:19] INFO Database connection estabilished
+[29 Apr 2019 14:29:20] INFO transaction isolation: 2
+[29 Apr 2019 14:29:20] DEBUG ================================================================================
+[29 Apr 2019 14:29:20] DEBUG Executing SQL script file: C:\Users\User\Documents\UIB\DAT353\webratioProsjekt\try2\WebContent\WEB-INF\descr\sql\data.sql
+[29 Apr 2019 14:29:20] DEBUG Executing statement:     INSERT INTO APP.MODULE (OID, MODULEID, MODULENAME) VALUES (1, 'sv1', 'Voters')
+[29 Apr 2019 14:29:20] DEBUG Executing statement:  INSERT INTO APP.MODULE (OID, MODULEID, MODULENAME) VALUES (2, 'sv3', 'Administrators')
+[29 Apr 2019 14:29:21] DEBUG Executing statement:      INSERT INTO "APP"."GROUP" (OID, GROUPNAME) VALUES (1, 'Voters')
+[29 Apr 2019 14:29:21] DEBUG Executing statement:  INSERT INTO "APP"."GROUP" (OID, GROUPNAME) VALUES (2, 'Administrators')
+[29 Apr 2019 14:29:21] DEBUG Executing statement:     INSERT INTO APP.GROUP_MODULE (GROUP_OID, MODULE_OID) VALUES (1, 1)
+[29 Apr 2019 14:29:21] DEBUG Executing statement:  INSERT INTO APP.GROUP_MODULE (GROUP_OID, MODULE_OID) VALUES (2, 2)
+[29 Apr 2019 14:29:21] DEBUG Executing statement:    INSERT INTO "APP"."USER" (OID, USERNAME, PASSWORD, EMAIL) VALUES (1, 'user', 'user', 'user@test.com')
+[29 Apr 2019 14:29:21] DEBUG Executing statement:  INSERT INTO "APP"."USER" (OID, USERNAME, PASSWORD, EMAIL) VALUES (2, 'admin', 'admin', 'admin@test.com')
+[29 Apr 2019 14:29:21] DEBUG Executing statement:    INSERT INTO APP.USER_GROUP (USER_OID, GROUP_OID) VALUES (1, 1)
+[29 Apr 2019 14:29:21] DEBUG Executing statement:  INSERT INTO APP.USER_GROUP (USER_OID, GROUP_OID) VALUES (2, 2)
+[29 Apr 2019 14:29:21] DEBUG Executing statement:    INSERT INTO APP.EXHIBIT (OID, NAME) VALUES (1, 'Science')
+[29 Apr 2019 14:29:21] DEBUG Executing statement:  INSERT INTO APP.EXHIBIT (OID, NAME) VALUES (2, 'WebRatio')
+[29 Apr 2019 14:29:21] DEBUG ================================================================================
+[29 Apr 2019 14:29:21] DEBUG SQL SCRIPT SUCCESSFULLY EXECUTED
+[29 Apr 2019 14:29:21] INFO Database connection closed
+[29 Apr 2019 14:29:21] DEBUG Total time: 5942 milliseconds

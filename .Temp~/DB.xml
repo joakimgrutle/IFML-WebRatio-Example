@@ -14,10 +14,6 @@
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INTEGER" size="10" decimalDigits="0" name="OID" primaryKey="true" notNull="true"/>
     <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="NAME" primaryKey="false" notNull="false"/>
   </Table>
-  <Table schema="APP" ignoreIndexes="false" name="EXHIBIT_GROUP" type="TABLE" refreshed="true">
-    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INTEGER" size="10" decimalDigits="0" name="EXHIBIT_OID" primaryKey="true" notNull="true"/>
-    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INTEGER" size="10" decimalDigits="0" name="GROUP_OID" primaryKey="true" notNull="true"/>
-  </Table>
   <Table schema="APP" ignoreIndexes="false" name="GROUP" type="TABLE" refreshed="true">
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INTEGER" size="10" decimalDigits="0" name="OID" primaryKey="true" notNull="true"/>
     <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="GROUPNAME" primaryKey="false" notNull="false"/>
@@ -34,10 +30,14 @@
   </Table>
   <Table schema="APP" ignoreIndexes="false" name="USER" type="TABLE" refreshed="true">
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INTEGER" size="10" decimalDigits="0" name="OID" primaryKey="true" notNull="true"/>
-    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="EMAIL" primaryKey="false" notNull="false"/>
-    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="PASSWORD" primaryKey="false" notNull="false"/>
     <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="USERNAME" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="PASSWORD" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="EMAIL" primaryKey="false" notNull="false"/>
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INTEGER" size="10" decimalDigits="0" name="GROUP_OID" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="APP" ignoreIndexes="false" name="USER_EXHIBIT" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INTEGER" size="10" decimalDigits="0" name="USER_OID" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INTEGER" size="10" decimalDigits="0" name="EXHIBIT_OID" primaryKey="true" notNull="true"/>
   </Table>
   <Table schema="APP" ignoreIndexes="false" name="USER_GROUP" type="TABLE" refreshed="true">
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INTEGER" size="10" decimalDigits="0" name="USER_OID" primaryKey="true" notNull="true"/>
@@ -46,6 +46,7 @@
   <Table schema="APP" ignoreIndexes="false" name="VOTE" type="TABLE" refreshed="true">
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INTEGER" size="10" decimalDigits="0" name="OID" primaryKey="true" notNull="true"/>
     <Column sqlTypeId="8" indexed="unknown" autoIncrement="false" type="DOUBLE" size="52" decimalDigits="0" name="SCORE" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INTEGER" size="10" decimalDigits="0" name="USERID" primaryKey="false" notNull="false"/>
   </Table>
   <Table schema="APP" ignoreIndexes="false" name="VOTE_EXHIBIT" type="TABLE" refreshed="true">
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INTEGER" size="10" decimalDigits="0" name="VOTE_OID" primaryKey="true" notNull="true"/>

@@ -1,46 +1,46 @@
-[28 Mar 2019 11:53:31] DEBUG Executing SQL script
-[28 Mar 2019 11:53:31] INFO ================================================================================
-[28 Mar 2019 11:53:31] INFO onError= 'stop'
-[28 Mar 2019 11:53:31] INFO autoCommit= 'false'
-[28 Mar 2019 11:53:31] INFO username= 'manage'
-[28 Mar 2019 11:53:31] INFO outputPath= 'C:\WebRatio\WebRatio Community Platform 7.2.18.x64bit\workspace\Expo\.Temp~\UpdateSQL.xml'
-[28 Mar 2019 11:53:31] INFO outputLogPath= 'C:\WebRatio\WebRatio Community Platform 7.2.18.x64bit\workspace\Expo\.Temp~\UpdateSQL.xml.log'
-[28 Mar 2019 11:53:31] INFO encoding= ''
-[28 Mar 2019 11:53:31] INFO driverClass= 'org.apache.derby.jdbc.ClientDriver'
-[28 Mar 2019 11:53:31] INFO sqlScript= 'C:\WebRatio\WebRatio Community Platform 7.2.18.x64bit\workspace\Expo\.Temp~\UpdateSQL.sql'
-[28 Mar 2019 11:53:31] INFO eventSocketPort= '61238'
-[28 Mar 2019 11:53:31] INFO statementSeparator= ';'
-[28 Mar 2019 11:53:31] INFO derby.system.home= 'C:\WebRatio\WebRatio Community Platform 7.2.18.x64bit\workspace\.metadata\.plugins\com.webratio.commons.db\derby'
-[28 Mar 2019 11:53:31] INFO password= 'Manage'
-[28 Mar 2019 11:53:31] INFO url= 'jdbc:derby://localhost:50124/ExpoDB;create=true'
-[28 Mar 2019 11:53:31] INFO ================================================================================
-[28 Mar 2019 11:53:31] INFO Connecting to the Database...
-[28 Mar 2019 11:53:31] INFO Database connection estabilished
-[28 Mar 2019 11:53:32] INFO transaction isolation: 2
-[28 Mar 2019 11:53:32] DEBUG ================================================================================
-[28 Mar 2019 11:53:32] DEBUG Executing SQL script file: C:\WebRatio\WebRatio Community Platform 7.2.18.x64bit\workspace\Expo\.Temp~\UpdateSQL.sql
-[28 Mar 2019 11:53:32] DEBUG Executing statement:  create table "APP"."GROUP" ( "OID"  integer  not null, "GROUPNAME"  varchar(255), primary key ("OID") )
-[28 Mar 2019 11:53:32] DEBUG Executing statement:    create table "APP"."MODULE" ( "OID"  integer  not null, "MODULEID"  varchar(255), "MODULENAME"  varchar(255), primary key ("OID") )
-[28 Mar 2019 11:53:32] DEBUG Executing statement:    create table "APP"."USER" ( "OID"  integer  not null, "USERNAME"  varchar(255), "PASSWORD"  varchar(255), "EMAIL"  varchar(255), primary key ("OID") )
-[28 Mar 2019 11:53:32] DEBUG Executing statement:    create table "APP"."EXHIBIT" ( "OID"  integer  not null, "NAME"  varchar(255), primary key ("OID") )
-[28 Mar 2019 11:53:32] DEBUG Executing statement:    create table "APP"."VOTE" ( "OID"  integer  not null, "SCORE"  double, primary key ("OID") )
-[28 Mar 2019 11:53:32] DEBUG Executing statement:    alter table "APP"."GROUP"  add column  "MODULE_OID"  integer
-[28 Mar 2019 11:53:32] DEBUG Executing statement:  alter table "APP"."GROUP"   add constraint FK_GROUP_MODULE foreign key ("MODULE_OID") references "APP"."MODULE" ("OID")
-[28 Mar 2019 11:53:32] DEBUG Executing statement:    create table "APP"."GROUP_MODULE" ( "GROUP_OID"  integer not null, "MODULE_OID"  integer not null, primary key ("GROUP_OID", "MODULE_OID") )
-[28 Mar 2019 11:53:32] DEBUG Executing statement:  alter table "APP"."GROUP_MODULE"   add constraint FK_GROUP_MODULE_GROUP foreign key ("GROUP_OID") references "APP"."GROUP" ("OID")
-[28 Mar 2019 11:53:32] DEBUG Executing statement:  alter table "APP"."GROUP_MODULE"   add constraint FK_GROUP_MODULE_MODULE foreign key ("MODULE_OID") references "APP"."MODULE" ("OID")
-[28 Mar 2019 11:53:32] DEBUG Executing statement:    alter table "APP"."USER"  add column  "GROUP_OID"  integer
-[28 Mar 2019 11:53:32] DEBUG Executing statement:  alter table "APP"."USER"   add constraint FK_USER_GROUP foreign key ("GROUP_OID") references "APP"."GROUP" ("OID")
-[28 Mar 2019 11:53:32] DEBUG Executing statement:    create table "APP"."USER_GROUP" ( "USER_OID"  integer not null, "GROUP_OID"  integer not null, primary key ("USER_OID", "GROUP_OID") )
-[28 Mar 2019 11:53:32] DEBUG Executing statement:  alter table "APP"."USER_GROUP"   add constraint FK_USER_GROUP_USER foreign key ("USER_OID") references "APP"."USER" ("OID")
-[28 Mar 2019 11:53:32] DEBUG Executing statement:  alter table "APP"."USER_GROUP"   add constraint FK_USER_GROUP_GROUP foreign key ("GROUP_OID") references "APP"."GROUP" ("OID")
-[28 Mar 2019 11:53:32] DEBUG Executing statement:    create table "APP"."EXHIBIT_GROUP" ( "EXHIBIT_OID"  integer not null, "GROUP_OID"  integer not null, primary key ("EXHIBIT_OID", "GROUP_OID") )
-[28 Mar 2019 11:53:32] DEBUG Executing statement:  alter table "APP"."EXHIBIT_GROUP"   add constraint FK_EXHIBIT_GROUP_EXHIBIT foreign key ("EXHIBIT_OID") references "APP"."EXHIBIT" ("OID")
-[28 Mar 2019 11:53:32] DEBUG Executing statement:  alter table "APP"."EXHIBIT_GROUP"   add constraint FK_EXHIBIT_GROUP_GROUP foreign key ("GROUP_OID") references "APP"."GROUP" ("OID")
-[28 Mar 2019 11:53:32] DEBUG Executing statement:    create table "APP"."VOTE_EXHIBIT" ( "VOTE_OID"  integer not null, "EXHIBIT_OID"  integer not null, primary key ("VOTE_OID", "EXHIBIT_OID") )
-[28 Mar 2019 11:53:33] DEBUG Executing statement:  alter table "APP"."VOTE_EXHIBIT"   add constraint FK_VOTE_EXHIBIT_VOTE foreign key ("VOTE_OID") references "APP"."VOTE" ("OID")
-[28 Mar 2019 11:53:33] DEBUG Executing statement:  alter table "APP"."VOTE_EXHIBIT"   add constraint FK_VOTE_EXHIBIT_EXHIBIT foreign key ("EXHIBIT_OID") references "APP"."EXHIBIT" ("OID")
-[28 Mar 2019 11:53:33] DEBUG ================================================================================
-[28 Mar 2019 11:53:33] DEBUG SQL SCRIPT SUCCESSFULLY EXECUTED
-[28 Mar 2019 11:53:33] INFO Database connection closed
-[28 Mar 2019 11:53:33] DEBUG Total time: 2148 milliseconds
+[29 Apr 2019 14:28:36] DEBUG Executing SQL script
+[29 Apr 2019 14:28:36] INFO ================================================================================
+[29 Apr 2019 14:28:36] INFO onError= 'stop'
+[29 Apr 2019 14:28:36] INFO autoCommit= 'false'
+[29 Apr 2019 14:28:36] INFO username= 'manage'
+[29 Apr 2019 14:28:36] INFO outputPath= 'C:\Users\User\Documents\UIB\DAT353\webratioProsjekt\try2\.Temp~\UpdateSQL.xml'
+[29 Apr 2019 14:28:36] INFO outputLogPath= 'C:\Users\User\Documents\UIB\DAT353\webratioProsjekt\try2\.Temp~\UpdateSQL.xml.log'
+[29 Apr 2019 14:28:36] INFO encoding= ''
+[29 Apr 2019 14:28:36] INFO driverClass= 'org.apache.derby.jdbc.ClientDriver'
+[29 Apr 2019 14:28:36] INFO sqlScript= 'C:\Users\User\Documents\UIB\DAT353\webratioProsjekt\try2\.Temp~\UpdateSQL.sql'
+[29 Apr 2019 14:28:36] INFO eventSocketPort= '58532'
+[29 Apr 2019 14:28:37] INFO statementSeparator= ';'
+[29 Apr 2019 14:28:37] INFO derby.system.home= 'C:\WebRatio\WebRatio Community Platform 7.2.18.x64bit\WebRatio\workspace2\.metadata\.plugins\com.webratio.commons.db\derby'
+[29 Apr 2019 14:28:37] INFO password= 'Manage'
+[29 Apr 2019 14:28:37] INFO url= 'jdbc:derby://localhost:50124/ExpoDB;create=true'
+[29 Apr 2019 14:28:37] INFO ================================================================================
+[29 Apr 2019 14:28:37] INFO Connecting to the Database...
+[29 Apr 2019 14:28:38] INFO Database connection estabilished
+[29 Apr 2019 14:28:39] INFO transaction isolation: 2
+[29 Apr 2019 14:28:39] DEBUG ================================================================================
+[29 Apr 2019 14:28:39] DEBUG Executing SQL script file: C:\Users\User\Documents\UIB\DAT353\webratioProsjekt\try2\.Temp~\UpdateSQL.sql
+[29 Apr 2019 14:28:39] DEBUG Executing statement:  create table "APP"."GROUP" ( "OID"  integer  not null, "GROUPNAME"  varchar(255), primary key ("OID") )
+[29 Apr 2019 14:28:40] DEBUG Executing statement:    create table "APP"."MODULE" ( "OID"  integer  not null, "MODULEID"  varchar(255), "MODULENAME"  varchar(255), primary key ("OID") )
+[29 Apr 2019 14:28:40] DEBUG Executing statement:    create table "APP"."USER" ( "OID"  integer  not null, "USERNAME"  varchar(255), "PASSWORD"  varchar(255), "EMAIL"  varchar(255), primary key ("OID") )
+[29 Apr 2019 14:28:40] DEBUG Executing statement:    create table "APP"."EXHIBIT" ( "OID"  integer  not null, "NAME"  varchar(255), primary key ("OID") )
+[29 Apr 2019 14:28:40] DEBUG Executing statement:    create table "APP"."VOTE" ( "OID"  integer  not null, "SCORE"  double, "USERID"  integer, primary key ("OID") )
+[29 Apr 2019 14:28:40] DEBUG Executing statement:    alter table "APP"."GROUP"  add column  "MODULE_OID"  integer
+[29 Apr 2019 14:28:41] DEBUG Executing statement:  alter table "APP"."GROUP"   add constraint FK_GROUP_MODULE foreign key ("MODULE_OID") references "APP"."MODULE" ("OID")
+[29 Apr 2019 14:28:41] DEBUG Executing statement:    create table "APP"."GROUP_MODULE" ( "GROUP_OID"  integer not null, "MODULE_OID"  integer not null, primary key ("GROUP_OID", "MODULE_OID") )
+[29 Apr 2019 14:28:41] DEBUG Executing statement:  alter table "APP"."GROUP_MODULE"   add constraint FK_GROUP_MODULE_GROUP foreign key ("GROUP_OID") references "APP"."GROUP" ("OID")
+[29 Apr 2019 14:28:41] DEBUG Executing statement:  alter table "APP"."GROUP_MODULE"   add constraint FK_GROUP_MODULE_MODULE foreign key ("MODULE_OID") references "APP"."MODULE" ("OID")
+[29 Apr 2019 14:28:42] DEBUG Executing statement:    alter table "APP"."USER"  add column  "GROUP_OID"  integer
+[29 Apr 2019 14:28:42] DEBUG Executing statement:  alter table "APP"."USER"   add constraint FK_USER_GROUP foreign key ("GROUP_OID") references "APP"."GROUP" ("OID")
+[29 Apr 2019 14:28:42] DEBUG Executing statement:    create table "APP"."USER_GROUP" ( "USER_OID"  integer not null, "GROUP_OID"  integer not null, primary key ("USER_OID", "GROUP_OID") )
+[29 Apr 2019 14:28:42] DEBUG Executing statement:  alter table "APP"."USER_GROUP"   add constraint FK_USER_GROUP_USER foreign key ("USER_OID") references "APP"."USER" ("OID")
+[29 Apr 2019 14:28:42] DEBUG Executing statement:  alter table "APP"."USER_GROUP"   add constraint FK_USER_GROUP_GROUP foreign key ("GROUP_OID") references "APP"."GROUP" ("OID")
+[29 Apr 2019 14:28:42] DEBUG Executing statement:    create table "APP"."VOTE_EXHIBIT" ( "VOTE_OID"  integer not null, "EXHIBIT_OID"  integer not null, primary key ("VOTE_OID", "EXHIBIT_OID") )
+[29 Apr 2019 14:28:43] DEBUG Executing statement:  alter table "APP"."VOTE_EXHIBIT"   add constraint FK_VOTE_EXHIBIT_VOTE foreign key ("VOTE_OID") references "APP"."VOTE" ("OID")
+[29 Apr 2019 14:28:43] DEBUG Executing statement:  alter table "APP"."VOTE_EXHIBIT"   add constraint FK_VOTE_EXHIBIT_EXHIBIT foreign key ("EXHIBIT_OID") references "APP"."EXHIBIT" ("OID")
+[29 Apr 2019 14:28:43] DEBUG Executing statement:    create table "APP"."USER_EXHIBIT" ( "USER_OID"  integer not null, "EXHIBIT_OID"  integer not null, primary key ("USER_OID", "EXHIBIT_OID") )
+[29 Apr 2019 14:28:43] DEBUG Executing statement:  alter table "APP"."USER_EXHIBIT"   add constraint FK_USER_EXHIBIT_USER foreign key ("USER_OID") references "APP"."USER" ("OID")
+[29 Apr 2019 14:28:43] DEBUG Executing statement:  alter table "APP"."USER_EXHIBIT"   add constraint FK_USER_EXHIBIT_EXHIBIT foreign key ("EXHIBIT_OID") references "APP"."EXHIBIT" ("OID")
+[29 Apr 2019 14:28:44] DEBUG ================================================================================
+[29 Apr 2019 14:28:44] DEBUG SQL SCRIPT SUCCESSFULLY EXECUTED
+[29 Apr 2019 14:28:44] INFO Database connection closed
+[29 Apr 2019 14:28:44] DEBUG Total time: 9134 milliseconds

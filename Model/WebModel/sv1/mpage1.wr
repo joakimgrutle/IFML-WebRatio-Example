@@ -1,0 +1,51 @@
+<MasterPage xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="170" gr:y="5" id="sv1#mpage1" name="Master">
+  <ContentUnits>
+    <GetUnit gr:x="0" gr:y="0" id="sv1#mpage1#gtu8" name="Get current user" contextParameters="UserCtxParam">
+      <Link id="sv1#mpage1#gtu8#ln19" name="Flow19" to="sv1#mpage1#dau5" automaticCoupling="true" type="transport" validate="true"/>
+    </GetUnit>
+    <DataUnit gr:x="185" gr:y="0" id="sv1#mpage1#dau5" name="User" entity="User" displayAttributes="userName" linkOrder="sv1#mpage1#dau5#ln20">
+      <Selector id="sv1#mpage1#dau5#su8" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#mpage1#dau5#su8#kcond7" name="KeyCondition7" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv1#mpage1#dau5#ln20" name="Logout" to="sv1#lou1" automaticCoupling="true" type="normal" validate="true"/>
+    </DataUnit>
+    <EntryUnit gr:x="10" gr:y="100" id="sv1#mpage1#enu6" name="Login" fieldOrder="sv1#mpage1#enu6#fld9 sv1#mpage1#enu6#fld10" linkOrder="sv1#mpage1#enu6#ln21" gr:showAllParts="false">
+      <Field id="sv1#mpage1#enu6#fld10" name="Password" type="password" modifiable="true"/>
+      <Field id="sv1#mpage1#enu6#fld9" name="Username" type="string" modifiable="true"/>
+      <Link id="sv1#mpage1#enu6#ln21" name="Login" to="sv1#lgu2" type="normal" validate="true">
+        <LinkParameter id="sv1#mpage1#enu6#ln21#par36" name="Username_Username" source="sv1#mpage1#enu6#fld9" target="sv1#lgu2.username"/>
+        <LinkParameter id="sv1#mpage1#enu6#ln21#par37" name="Password_Password" source="sv1#mpage1#enu6#fld10" target="sv1#lgu2.password"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:CustomLocation name="Right">
+    <layout:Grid containerType="cell">
+      <layout:Row>
+        <layout:Cell>
+          <layout:Unit unitId="sv1#mpage1#enu6" layout:unitVisibilityCondition="sv1#mpage1#cexpr2">
+            <layout:Field field="sv1#mpage1#enu6#fld9"/>
+            <layout:Field field="sv1#mpage1#enu6#fld10"/>
+            <layout:Link link="sv1#mpage1#enu6#ln21"/>
+            <layout:LayoutParameter name="mandatory-fields" value="true" type="unit"/>
+          </layout:Unit>
+        </layout:Cell>
+      </layout:Row>
+    </layout:Grid>
+  </layout:CustomLocation>
+  <layout:CustomLocation name="User">
+    <layout:Grid containerType="cell">
+      <layout:Row>
+        <layout:Cell>
+          <layout:Unit unitId="sv1#mpage1#dau5" layout:frameLayout="None" layout:unitLayout="WRDefault/User">
+            <layout:Attribute attribute="userName"/>
+            <layout:Link link="sv1#mpage1#dau5#ln20"/>
+            <layout:LayoutParameter name="use-empty-unit-message" value="true" type="unit"/>
+          </layout:Unit>
+        </layout:Cell>
+      </layout:Row>
+    </layout:Grid>
+  </layout:CustomLocation>
+  <ConditionExpression id="sv1#mpage1#cexpr2" name="ActivationExpression 2">
+    <TextValue xml:space="preserve">UserCtxParam == '0'</TextValue>
+  </ConditionExpression>
+</MasterPage>
