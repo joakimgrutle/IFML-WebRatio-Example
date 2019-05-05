@@ -1,0 +1,12 @@
+<OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1#opg2" name="Update vote" transaction="true" gr:x="715" gr:y="275">
+  <OperationUnits>
+    <DeleteUnit id="sv1#opg2#dlu5" name="DeleteExistingVote" gr:x="0" gr:y="0" entity="ent2">
+      <Selector id="sv1#opg2#dlu5#su9" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv1#opg2#dlu5#su9#rcond7" name="ExhibitToVoteCondition" predicate="in" implied="false" role="rel2#role4"/>
+        <AttributesCondition id="sv1#opg2#dlu5#su9#acond5" name="UserIdCondition" predicate="eq" booleanOperator="or" implied="false" attributes="ent2#att5"/>
+      </Selector>
+      <OKLink id="sv1#opg2#dlu5#oln4" name="OKFlow3" to="sv1#opg2#cru3"/>
+    </DeleteUnit>
+    <CreateUnit id="sv1#opg2#cru3" name="CreateVote" gr:x="30" gr:y="155" entity="ent2"/>
+  </OperationUnits>
+</OperationGroup>

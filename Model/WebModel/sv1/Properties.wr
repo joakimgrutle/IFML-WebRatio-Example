@@ -2,11 +2,11 @@
   <OperationUnits>
     <LogoutUnit gr:x="500" gr:y="10" id="sv1#lou1" name="Logout1" siteView="sv1"/>
     <LoginUnit gr:x="495" gr:y="135" id="sv1#lgu2" name="Login2"/>
-    <GetUnit gr:x="585" gr:y="180" id="sv1#gtu10" name="Get10" contextParameters="UserCtxParam" linkOrder="sv1#gtu10#ln26">
+    <GetUnit gr:x="455" gr:y="220" id="sv1#gtu10" name="Get10" contextParameters="UserCtxParam" linkOrder="sv1#gtu10#ln26 sv1#gtu10#ln34">
       <Link id="sv1#gtu10#ln26" name="Flow26" to="sv1#area1#page1#enu3" type="transport" validate="true">
         <LinkParameter id="sv1#gtu10#ln26#par40" name="UserCtxParam.oid_userid" source="sv1#gtu10.UserCtxParam" target="sv1#area1#page1#enu3#fld14_slot"/>
-        <LinkParameter id="sv1#gtu10#ln26#par56" name="UserCtxParam.oid_Key Condition [oid]" source="sv1#gtu10.UserCtxParam" target="sv1#area1#page1#enu3.ent2#att3"/>
       </Link>
+      <Link id="sv1#gtu10#ln34" name="Flow34" to="sv1#area1#page1#dau9" type="transport" validate="true"/>
     </GetUnit>
   </OperationUnits>
 </SiteView>

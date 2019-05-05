@@ -63,8 +63,7 @@
       <db:JoinColumn attribute="ent1#att1" name="EXHIBIT_OID"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db2" name="ExpoDB" type="Apache Derby" runtimeType="Apache Derby" url="jdbc:derby://localhost:50124/ExpoDB;create=true" username="manage" password="Manage" schema="APP">
-  </db:Database>
+  <db:Database id="db2" name="ExpoDB" type="Apache Derby" runtimeType="Apache Derby" url="jdbc:derby://localhost:50124/ExpoDB;create=true" username="manage" password="Manage" schema="APP"/>
   <Relationship id="rel3" name="User_Exhibit" sourceEntity="User" targetEntity="ent1" db:database="db2" db:table="USER_EXHIBIT">
     <RelationshipRole1 id="rel3#role5" name="UserToExhibit" maxCard="N">
       <db:JoinColumn attribute="userOID" name="USER_OID"/>

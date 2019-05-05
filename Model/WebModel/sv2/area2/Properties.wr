@@ -1,11 +1,9 @@
 <Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv2#area2" name="Expo" landmark="true" gr:x="25" gr:y="120" defaultPage="sv2#area2#dlu2">
   <OperationUnits>
-    <DeleteUnit gr:x="600" gr:y="185" id="sv2#area2#dlu2" name="ClearVotes" entity="ent2">
+    <DeleteUnit gr:x="150" gr:y="190" id="sv2#area2#dlu2" name="ClearVotes" entity="ent2">
       <Selector id="sv2#area2#dlu2#su6" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv2#area2#dlu2#su6#rcond2" name="RoleCondition2" role="rel2#role4" predicate="in" implied="false"/>
       </Selector>
     </DeleteUnit>
-    <CreateUnit id="sv2#area2#cru1" name="ChangeScore" gr:x="615" gr:y="0" entity="ent2" gr:showAllParts="false"/>
-    <ModuleInstanceUnit gr:x="670" gr:y="170" id="sv2#area2#miu7" action="false"/>
   </OperationUnits>
 </Area>
