@@ -22,7 +22,7 @@ The final application that will be made in this tutorial is also available in th
         - Select type: *Apache derby*
         - Add to URL: jdbc:derby://localhost:50124/*Your_DB_Name_Here*;create=true
         - Add "admin" as username and password
-!(screenshots/DBProperties.JPG) 
+![Database properties](screenshots/DBProperties.JPG) 
 
 3. **Create domain model**
     **NB! The naming in this part is crucial if we want to avoid having to make changes to the SQL script manually**
@@ -35,7 +35,7 @@ The final application that will be made in this tutorial is also available in th
          a relationship between *Exhibit* and *Rating*
 
 The resulting domain model should look something like this:
-!(screenshots/DomainModelFinal.JPG)
+![Final domain model](screenshots/DomainModelFinal.JPG)
 
 4. **Initialize Database**
     - Right click on your database and click on *Synchronize* 
@@ -60,7 +60,7 @@ The resulting domain model should look something like this:
         - In properties window: locate *Display Attributes*, click on select and check *Name*
 
 This is what the view model should look like:
-!(screenshots/BasicView.JPG)
+![Basic view model](screenshots/BasicView.JPG)
 
 Now that we have created a view for our application, we can run the program before continuing, to view our list of exhibits.
 To run the application: Right click in outline window -> *Generate* -> *Generate and Run* (the first execution will be slow).
@@ -68,7 +68,7 @@ A tomcat server terminal window will pop up, before the webpage automatically po
 To stop the application, simply close the tomcat terminal window.
 
 This is what it should look like:
-!(screenshots/HomePageInital.JPG)
+![Initial home page view](screenshots/HomePageInital.JPG)
 
 6. **Create more advanced system for voting on exhibits**
     - Add new page in *Expo* area -> *Add* -> *Page* and call it *Exhibit*
@@ -92,8 +92,8 @@ This is what it should look like:
     - Create flow from *Details* to *Rating* (like flow above, no need for properties)
 
 This is what the view model now should look like:
-!(screenshots/SimpleVoteView.JPG)
+![Simple vote model](screenshots/SimpleVoteView.JPG)
 And this is the exhibit page after we have made a vote for this exhibit:
-!(screenshots/ExhibitDetails.JPG)
+![Simple vote site](screenshots/ExhibitDetails.JPG)
     
 
