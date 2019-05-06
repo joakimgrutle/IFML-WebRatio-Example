@@ -1,12 +1,27 @@
-<OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="665" gr:y="175" id="sv2#opg1" name="Update vote" transaction="true">
+<OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="660" gr:y="30" id="sv2#opg1" name="Update vote" transaction="true">
   <OperationUnits>
-    <DeleteUnit gr:x="0" gr:y="0" id="sv2#opg1#dlu4" name="DeleteExistingVote" entity="ent2">
+    <DeleteUnit gr:x="0" gr:y="120" id="sv2#opg1#dlu4" name="DeleteExistingVote" entity="ent2">
       <Selector id="sv2#opg1#dlu4#su7" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv2#opg1#dlu4#su7#rcond6" name="ExhibitToVoteCondition" predicate="in" implied="false" role="rel2#role4"/>
         <AttributesCondition id="sv2#opg1#dlu4#su7#acond4" name="UserIdCondition" predicate="eq" booleanOperator="or" implied="false" attributes="ent2#att5"/>
       </Selector>
-      <OKLink id="sv2#opg1#dlu4#oln3" name="OKFlow3" to="sv2#opg1#cru2"/>
+      <OKLink id="sv2#opg1#dlu4#oln2" name="OKFlow2" to="sv2#opg1#cru1">
+        <LinkParameter id="sv2#opg1#dlu4#oln2#par31" name="Result_PASSING_userid" sourceLinkParameter="sv2#opg1#scu2#oln1#par30" target="sv2#opg1#cru1.ent2#att5"/>
+      </OKLink>
     </DeleteUnit>
-    <CreateUnit gr:x="30" gr:y="155" id="sv2#opg1#cru2" name="CreateVote" entity="ent2"/>
+    <ScriptUnit id="sv2#opg1#scu2" name="GetSessionId" gr:x="25" gr:y="0">
+      <ScriptUnitText xml:space="preserve">import com.webratio.rtx.RTXConstants
+import javax.servlet.http.HttpServletRequest
+import javax.servlet.http.HttpSession;
+
+HttpServletRequest request = localContext.get(RTXConstants.HTTP_SERVLET_REQUEST_KEY)
+def sessionId = request.getSession().getId()
+return sessionId</ScriptUnitText>
+      <OKLink id="sv2#opg1#scu2#oln1" name="OKFlow1" to="sv2#opg1#dlu4">
+        <LinkParameter id="sv2#opg1#scu2#oln1#par14" name="sessionId_UserIdCondition" source="result" target="sv2#opg1#dlu4#su7#acond4"/>
+        <LinkParameter id="sv2#opg1#scu2#oln1#par30" name="Result_PASSING" source="result" passing="true"/>
+      </OKLink>
+    </ScriptUnit>
+    <CreateUnit id="sv2#opg1#cru1" entity="ent2" gr:x="35" gr:y="300" name="CreateVote"/>
   </OperationUnits>
 </OperationGroup>

@@ -1,15 +1,17 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#area2#page3" name="Exhibit" gr:x="290" gr:y="15" layout:cellLayout="WRDefault/BAM_TrendChart" layout:style="WebRatio">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#area2#page3" name="Exhibit" gr:x="290" gr:y="75" layout:cellLayout="WRDefault/BAM_TrendChart" layout:style="WebRatio">
   <ContentUnits>
-    <EntryUnit id="sv2#area2#page3#enu1" name="Vote" customDescriptor="false" computationMode="execute" gr:x="165" gr:y="10" entity="ent2" gr:showAllParts="false" ajaxTooltipEnabled="false" fieldOrder="sv2#area2#page3#enu1#fld1 sv2#area2#page3#enu1#fld21" linkOrder="sv2#area2#page3#enu1#ln24">
+    <EntryUnit id="sv2#area2#page3#enu1" name="Vote" customDescriptor="false" computationMode="execute" gr:x="165" gr:y="10" entity="ent2" gr:showAllParts="false" ajaxTooltipEnabled="false" fieldOrder="sv2#area2#page3#enu1#fld1" linkOrder="sv2#area2#page3#enu1#ln24">
       <Field id="sv2#area2#page3#enu1#fld1" name="score" ajaxEventEnabled="false" ajaxUploadEnabled="false" type="float" modifiable="true" attribute="ent2#att4" hidden="false" preloaded="false"/>
-      <Field id="sv2#area2#page3#enu1#fld21" name="userid" type="integer" attribute="ent2#att5" modifiable="true"/>
-      <Link id="sv2#area2#page3#enu1#ln23" name="Flow23" to="sv2#opg1#cru2" type="transport" validate="true">
-        <LinkParameter id="sv2#area2#page3#enu1#ln23#par19" name="oid_PASSING_Exhibit.oid(VoteToExhibit)" sourceLinkParameter="sv2#area2#page3#dau2#ln5#par15" target="sv2#opg1#cru2.rel2#role3.ent1#att1"/>
-        <LinkParameter id="sv2#area2#page3#enu1#ln23#par23" name="Vote Object_Vote Object" source="entityBean" target="sv2#opg1#cru2.entityBeans"/>
+      <Link id="sv2#area2#page3#enu1#ln23" name="Flow23" to="sv2#opg1#cru1" type="transport" validate="true">
+        <LinkParameter id="sv2#area2#page3#enu1#ln23#par19" name="oid_PASSING_Exhibit.oid(VoteToExhibit)" sourceLinkParameter="sv2#area2#page3#dau2#ln5#par15" target="sv2#opg1#cru1.rel2#role3.ent1#att1"/>
+        <LinkParameter id="sv2#area2#page3#enu1#ln23#par9" name="score_score" source="sv2#area2#page3#enu1#fld1" target="sv2#opg1#cru1.ent2#att4"/>
+        <LinkParameter id="sv2#area2#page3#enu1#ln23#par24" name="Key [oid]_oid" source="key.ent2#att3" target="sv2#opg1#cru1.ent2#att3"/>
+        <LinkParameter id="sv2#area2#page3#enu1#ln23#par25" name="Vote Object_Vote Object" source="entityBean" target="sv2#opg1#cru1.entityBeans"/>
       </Link>
-      <Link id="sv2#area2#page3#enu1#ln24" name="Flow24" to="sv2#opg1#dlu4" type="normal" validate="true">
-        <LinkParameter id="sv2#area2#page3#enu1#ln24#par24" name="userid_UserIdCondition" source="sv2#area2#page3#enu1#fld21" target="sv2#opg1#dlu4#su7#acond4"/>
-        <LinkParameter id="sv2#area2#page3#enu1#ln24#par25" name="oid_PASSING_ExhibitToVoteCondition [oid]" sourceLinkParameter="sv2#area2#page3#dau2#ln5#par15" target="sv2#opg1#dlu4#su7#rcond6.ent1#att1"/>
+      <Link id="sv2#area2#page3#enu1#ln24" name="Vote" to="sv2#opg1#scu2" type="normal" validate="true" gr:bendpoints="90,89,-115,-71"/>
+      <Field id="sv2#area2#page3#enu1#fld2" name="userid" type="string" attribute="ent2#att5" hidden="true" preloaded="true"/>
+      <Link id="sv2#area2#page3#enu1#ln8" name="Flow8" to="sv2#opg1#dlu4" type="transport" validate="true">
+        <LinkParameter id="sv2#area2#page3#enu1#ln8#par13" name="oid_PASSING_ExhibitToVoteCondition [oid]" sourceLinkParameter="sv2#area2#page3#dau2#ln5#par15" target="sv2#opg1#dlu4#su7#rcond6.ent1#att1"/>
       </Link>
     </EntryUnit>
     <DataUnit id="sv2#area2#page3#dau2" name="ExhibitDetails" gr:x="15" gr:y="0" entity="ent1" displayAll="true" linkOrder="sv2#area2#page3#dau2#ln9">
@@ -35,7 +37,6 @@
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv2#area2#page3#enu1">
           <layout:Field field="sv2#area2#page3#enu1#fld1"/>
-          <layout:Field field="sv2#area2#page3#enu1#fld21"/>
           <layout:Link link="sv2#area2#page3#enu1#ln24"/>
         </layout:Unit>
       </layout:Cell>

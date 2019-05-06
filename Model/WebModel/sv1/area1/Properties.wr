@@ -1,3 +1,26 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="15" gr:y="175" id="sv1#area1" name="Expo" landmark="true">
-  <OperationUnits/>
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="15" gr:y="120" id="sv1#area1" name="Expo" landmark="true">
+  <OperationUnits>
+    <ScriptUnit id="sv1#area1#scu6" name="GetSessionId" gr:x="500" gr:y="0">
+      <ScriptUnitText xml:space="preserve">import com.webratio.rtx.RTXConstants
+import javax.servlet.http.HttpServletRequest
+import javax.servlet.http.HttpSession;
+
+HttpServletRequest request = localContext.get(RTXConstants.HTTP_SERVLET_REQUEST_KEY)
+def sessionId = request.getSession().getId()
+return sessionId</ScriptUnitText>
+      <Link id="sv1#area1#scu6#ln22" name="Flow11" to="sv1#area1#page1#dau1" type="transport" validate="true">
+        <LinkParameter id="sv1#area1#scu6#ln22#par61" name="oid_PASSING_KeyCondition1 [oid]" sourceLinkParameter="sv1#area1#page2#pwu2#ln21#par51" target="sv1#area1#page1#dau1#su1#kcond1.ent1#att1"/>
+      </Link>
+      <Link id="sv1#area1#scu6#ln25" name="Flow12" to="sv1#area1#page1#dau9" type="transport" validate="true">
+        <LinkParameter id="sv1#area1#scu6#ln25#par57" name="Result_AttCondition1" source="result" target="sv1#area1#page1#dau9#su13#acond1"/>
+        <LinkParameter id="sv1#area1#scu6#ln25#par60" name="oid_PASSING_RoleCondition3 [oid]" sourceLinkParameter="sv1#area1#page2#pwu2#ln21#par51" target="sv1#area1#page1#dau9#su13#rcond3.ent1#att1"/>
+      </Link>
+      <Link id="sv1#area1#scu6#ln26" name="Flow13" to="sv1#area1#page1#enu3" type="transport" validate="true">
+        <LinkParameter id="sv1#area1#scu6#ln26#par58" name="Result_PASSING" source="result" passing="true"/>
+        <LinkParameter id="sv1#area1#scu6#ln26#par59" name="Result_userid" source="result" target="sv1#area1#page1#enu3#fld3_slot"/>
+        <LinkParameter id="sv1#area1#scu6#ln26#par62" name="oid_PASSING" sourceLinkParameter="sv1#area1#page2#pwu2#ln21#par51" passing="true"/>
+      </Link>
+      <OKLink id="sv1#area1#scu6#oln3" name="OKFlow3" to="sv1#area1#page1#dau1" gr:bendpoints="-69,70,101,-60"/>
+    </ScriptUnit>
+  </OperationUnits>
 </Area>

@@ -1,29 +1,23 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="305" gr:y="50" id="sv1#area1#page1" name="Exhibit">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="300" gr:y="70" id="sv1#area1#page1" name="Exhibit">
   <ContentUnits>
-    <EntryUnit id="sv1#area1#page1#enu3" name="Votes" customDescriptor="false" computationMode="execute" gr:x="230" gr:y="10" entity="ent2" fieldOrder="sv1#area1#page1#enu3#fld5 sv1#area1#page1#enu3#fld14" linkOrder="sv1#area1#page1#enu3#ln31">
+    <EntryUnit id="sv1#area1#page1#enu3" name="Votes" customDescriptor="false" computationMode="execute" gr:x="185" gr:y="95" entity="ent2" fieldOrder="sv1#area1#page1#enu3#fld5" linkOrder="sv1#area1#page1#enu3#ln31">
       <Field id="sv1#area1#page1#enu3#fld5" name="score" ajaxEventEnabled="false" ajaxUploadEnabled="false" type="float" modifiable="true" attribute="ent2#att4" hidden="false" preloaded="false"/>
-      <Field id="sv1#area1#page1#enu3#fld14" name="userid" type="integer" attribute="ent2#att5" preloaded="true" modifiable="true"/>
-      <Link id="sv1#area1#page1#enu3#ln31" name="Flow31" to="sv1#opg2#dlu5" type="normal" validate="true">
-        <LinkParameter id="sv1#area1#page1#enu3#ln31#par28" name="oid_PASSING_ExhibitToVoteCondition [oid]" sourceLinkParameter="sv1#area1#page1#dau1#ln3#par17" target="sv1#opg2#dlu5#su9#rcond7.ent1#att1"/>
-        <LinkParameter id="sv1#area1#page1#enu3#ln31#par29" name="userid_UserIdCondition" source="sv1#area1#page1#enu3#fld14" target="sv1#opg2#dlu5#su9#acond5"/>
+      <Link id="sv1#area1#page1#enu3#ln31" name="Vote" to="sv1#opg2#dlu5" type="normal" validate="true">
+        <LinkParameter id="sv1#area1#page1#enu3#ln31#par63" name="oid_PASSING_ExhibitToVoteCondition [oid]" sourceLinkParameter="sv1#area1#scu6#ln26#par62" target="sv1#opg2#dlu5#su9#rcond7.ent1#att1"/>
+        <LinkParameter id="sv1#area1#page1#enu3#ln31#par64" name="Result_PASSING_UserIdCondition" sourceLinkParameter="sv1#area1#scu6#ln26#par58" target="sv1#opg2#dlu5#su9#acond5"/>
       </Link>
       <Link id="sv1#area1#page1#enu3#ln32" name="Flow32" to="sv1#opg2#cru3" type="transport" validate="true">
-        <LinkParameter id="sv1#area1#page1#enu3#ln32#par26" name="oid_PASSING_Exhibit.oid(VoteToExhibit)" sourceLinkParameter="sv1#area1#page1#dau1#ln3#par17" target="sv1#opg2#cru3.rel2#role3.ent1#att1"/>
         <LinkParameter id="sv1#area1#page1#enu3#ln32#par27" name="Vote Object_Vote Object" source="entityBean" target="sv1#opg2#cru3.entityBeans"/>
+        <LinkParameter id="sv1#area1#page1#enu3#ln32#par65" name="oid_PASSING_Exhibit.oid(VoteToExhibit)" sourceLinkParameter="sv1#area1#scu6#ln26#par62" target="sv1#opg2#cru3.rel2#role3.ent1#att1"/>
       </Link>
+      <Field id="sv1#area1#page1#enu3#fld3" name="userid" type="string" attribute="ent2#att5" hidden="true" preloaded="true"/>
     </EntryUnit>
-    <DataUnit gr:x="0" gr:y="0" id="sv1#area1#page1#dau1" name="ExhibitDetails" entity="ent1" displayAll="true">
+    <DataUnit gr:x="0" gr:y="155" id="sv1#area1#page1#dau1" name="ExhibitDetails" entity="ent1" displayAll="true">
       <Selector id="sv1#area1#page1#dau1#su1" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#area1#page1#dau1#su1#kcond1" name="KeyCondition1" predicate="in" implied="false"/>
       </Selector>
-      <Link id="sv1#area1#page1#dau1#ln3" name="Flow3" to="sv1#area1#page1#enu3" type="transport" validate="true">
-        <LinkParameter id="sv1#area1#page1#dau1#ln3#par17" name="oid_PASSING" source="data.ent1#att1" passing="true"/>
-      </Link>
-      <Link id="sv1#area1#page1#dau1#ln33" name="Flow33" to="sv1#area1#page1#dau9" type="transport" validate="true">
-        <LinkParameter id="sv1#area1#page1#dau1#ln33#par3" name="oid_RoleCondition3 [oid]" source="data.ent1#att1" target="sv1#area1#page1#dau9#su13#rcond3.ent1#att1"/>
-      </Link>
     </DataUnit>
-    <DataUnit gr:x="0" gr:y="135" id="sv1#area1#page1#dau9" name="UserVote" entity="ent2" displayAttributes="ent2#att3 ent2#att4 ent2#att5">
+    <DataUnit gr:x="5" gr:y="0" id="sv1#area1#page1#dau9" name="UserVote" entity="ent2" displayAttributes="ent2#att3 ent2#att4 ent2#att5">
       <Selector id="sv1#area1#page1#dau9#su13" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv1#area1#page1#dau9#su13#rcond3" name="RoleCondition3" role="rel2#role4" predicate="in" implied="false"/>
         <AttributesCondition id="sv1#area1#page1#dau9#su13#acond1" name="AttCondition1" predicate="eq" booleanOperator="or" implied="false" attributes="ent2#att5"/>
@@ -34,9 +28,8 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv1#area1#page1#enu3">
-          <layout:Field field="sv1#area1#page1#enu3#fld5"/>
-          <layout:Field field="sv1#area1#page1#enu3#fld14"/>
           <layout:Link link="sv1#area1#page1#enu3#ln31"/>
+          <layout:Field field="sv1#area1#page1#enu3#fld5"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

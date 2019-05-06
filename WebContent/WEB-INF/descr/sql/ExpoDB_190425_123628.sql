@@ -37,6 +37,7 @@ create table "APP"."EXHIBIT" (
 create table "APP"."VOTE" (
    "OID"  integer  not null,
    "SCORE"  double,
+   "USERID" varchar(255),
   primary key ("OID")
 );
 

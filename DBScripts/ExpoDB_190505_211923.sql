@@ -33,15 +33,6 @@ create table "APP"."EXHIBIT_2" (
 );
 
 
--- Vote [ent2]
-create table "APP"."VOTE_2" (
-   "OID"  integer  not null,
-   "SCORE"  double,
-   "USERID"  varchar(255),
-  primary key ("OID")
-);
-
-
 -- Group_DefaultModule [Group2DefaultModule_DefaultModule2Group]
 alter table "APP"."GROUP_2"  add column  "MODULE_2_OID"  integer;
 alter table "APP"."GROUP_2"   add constraint FK_GROUP_2_MODULE_2 foreign key ("MODULE_2_OID") references "APP"."MODULE_2" ("OID");
